@@ -18,13 +18,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: none;
       }
       .icon-btn{
+        -webkit-tap-highlight-color: transparent!important;
         border: none;
         border-radius: 3px;
         text-transform: none;
         background: none;
         color: white;
         cursor: pointer;
-        outline:0;
+        outline:none;
         font: inherit;
         padding: 0 5px 0 5px;
         height: 26px;
@@ -41,12 +42,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .icon-btn > span {
         margin: 0 5px;
       }
-      .icon-btn > iron-icon {
-        width: 20px;
-        height: 20px;
-      }
+      /*.icon-btn > iron-icon {
+        --iron-icon-width: 20px;
+        --iron-icon-height: 20px;
+      }*/
       .big-btn{
-        padding: 8px;
+        padding: 0;
         height: 40px;
         width: 40px;
       }
@@ -56,8 +57,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: #fff;
       }
       .big-btn > iron-icon{
-        width: 24px;
-        height: 24px;
+        --iron-icon-width: 24px;
+        --iron-icon-height: 24px;
+        margin: auto;
       }
 
       .ripple:after {
@@ -74,7 +76,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background-position: 50%;
         transform: scale(10,10);
         opacity: 0;
-        transition: transform .3s, opacity 1s;
+        transition: transform .1s, opacity 1s;
       }
 
       .ripple:active:after {
