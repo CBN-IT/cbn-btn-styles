@@ -14,29 +14,47 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="cbn-btn-styles">
   <template>
     <style>
+      .icon-btn{
+        border: none;
+        border-radius: 3px;
+        text-transform: none;
+        background: none;
+        color: white;
+        cursor: pointer;
+        outline:0;
+        font: inherit;
+        padding: 0 5px 0 5px;
+        height: 26px;
+        display: flex;
+        vertical-align: middle;
+        user-select: none;
+        transition: opacity 0s;
+        overflow: hidden;
+        position: relative;
+        transform: translate3d(0, 0, 0);
+        align-items: center;
+        flex-shrink: 0;
+      }
+      .icon-btn > span {
+        margin: 0 5px;
+      }
+      .icon-btn > iron-icon {
+        width: 20px;
+        height: 20px;
+      }
+      .big-btn{
+        padding: 8px;
+        height: 40px;
+        width: 40px;
+      }
       .small-btn{
         padding: 0;
         min-width: 0;
         color: #fff;
       }
-      .icon-btn {
-        text-transform: none;
-        vertical-align: middle;
-        color: #fff;
-        min-width: 0;
-        padding: 0 5px 0 5px;
-        margin: auto;
-        height: 26px;
-        overflow: hidden;
-        flex-shrink: 0
-      }
-      .icon-btn > span {
-        margin: 5px;
-      }
-      .icon-btn > iron-icon {
-        width: 20px;
-        height: 20px;
-        margin: 3px 0;
+      .big-btn > iron-icon{
+        width: 24px;
+        height: 24px;
       }
 
       .ripple:after {
@@ -53,7 +71,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background-position: 50%;
         transform: scale(10,10);
         opacity: 0;
-        transition: transform .5s, opacity 1s;
+        transition: transform .2s, opacity 1s;
       }
 
       .ripple:active:after {
